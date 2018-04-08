@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="author" content="Profesores: Carlos M. González Alcón - Carlos Pérez González (Área de Estadística e Investigación Operativa - Universidad de La Laguna)" />
+  <meta name="author" content="Profesores: Carlos M. González Alcón - Carlos Pérez González   (Dpto. Matemáticas, Estadística e Investigación Operativa - Universidad de La Laguna)" />
   <title>Introducción al R y su utilización para análisis estadístico con Rstudio y Rcommander</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
@@ -55,7 +55,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="slide titlepage">
   <h1 class="title">Introducción al R y su utilización para análisis estadístico con Rstudio y Rcommander</h1>
   <p class="author">
-Profesores: Carlos M. González Alcón - Carlos Pérez González (Área de Estadística e Investigación Operativa - Universidad de La Laguna)
+Profesores: Carlos M. González Alcón - Carlos Pérez González <br/> (Dpto. Matemáticas, Estadística e Investigación Operativa - Universidad de La Laguna)
   </p>
   <p class="date">Día 2, segunda parte.</p>
 </div>
@@ -305,7 +305,7 @@ pre {
 devtools<span class="op">::</span><span class="kw">source_gist</span>(<span class="st">&quot;1e7ee71e79346ffdd5a5&quot;</span>,<span class="dt">filename =</span> <span class="st">&quot;plotHistBox.R&quot;</span>)
 <span class="kw">plotHistBox</span>(ddt<span class="op">$</span>length)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot6a-1.png" />
+<img src="figure/plot6a-1.png" />
 
 </div>
 </div>
@@ -322,7 +322,7 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 
 <span class="kw">legend</span>( <span class="st">&quot;topright&quot;</span>, <span class="kw">sort</span>(<span class="kw">levels</span>(ddt<span class="op">$</span>species_name),<span class="dt">decreasing =</span> <span class="ot">TRUE</span>) , <span class="dt">fill=</span><span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>,<span class="st">&quot;green&quot;</span>) )</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot6b-1.png" />
+<img src="figure/plot6b-1.png" />
 
 </div>
 </div>
@@ -333,7 +333,7 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">boxplot</span>( ddt<span class="op">$</span>DDT_conc, <span class="dt">main=</span><span class="st">&quot;Diagrama box-and-whisker de DDT_conc&quot;</span>,<span class="dt">col=</span><span class="st">&quot;gray&quot;</span>)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot7a-1.png" />
+<img src="figure/plot7a-1.png" />
 
 </div>
 <ul>
@@ -342,7 +342,7 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqnorm</span>( ddt<span class="op">$</span>DDT_conc, <span class="dt">main=</span><span class="st">&quot;Q-q plot de DDT_conc&quot;</span>)
 <span class="kw">qqline</span>(ddt<span class="op">$</span>DDT_conc, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">lty=</span><span class="st">&quot;dashed&quot;</span>)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot7b-1.png" />
+<img src="figure/plot7b-1.png" />
 
 </div>
 </div>
@@ -351,12 +351,13 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 <ul>
 <li>Los gráficos 'Diagrama de dispersión' permiten representar 2 variables y añadir la información de un grupo.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(car)
-<span class="kw">scatterplot</span>(length<span class="op">~</span>weight <span class="op">|</span><span class="st"> </span>group, <span class="dt">reg.line=</span>lm, <span class="dt">smooth=</span><span class="ot">FALSE</span>, 
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(car)</code></pre></div>
+<pre><code>## Loading required package: car</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">scatterplot</span>(length<span class="op">~</span>weight <span class="op">|</span><span class="st"> </span>group, <span class="dt">reg.line=</span>lm, <span class="dt">smooth=</span><span class="ot">FALSE</span>, 
   <span class="dt">spread=</span><span class="ot">FALSE</span>, <span class="dt">boxplots=</span><span class="ot">FALSE</span>, <span class="dt">span=</span><span class="fl">0.5</span>, <span class="dt">by.groups=</span><span class="ot">TRUE</span>, <span class="dt">reset.par=</span><span class="ot">FALSE</span>, 
   <span class="dt">data=</span>ddt)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot8a-1.png" />
+<img src="figure/plot8a-1.png" />
 
 </div>
 </div>
@@ -365,11 +366,12 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 <ul>
 <li>Otro gráfico de 2 variables es 'Gráfica XY'</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(lattice)
-<span class="kw">xyplot</span>(length<span class="op">~</span>weight , <span class="dt">groups=</span>group, <span class="dt">type=</span><span class="st">&quot;p&quot;</span>, <span class="dt">pch=</span><span class="dv">16</span>,
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(lattice)</code></pre></div>
+<pre><code>## Loading required package: lattice</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">xyplot</span>(length<span class="op">~</span>weight , <span class="dt">groups=</span>group, <span class="dt">type=</span><span class="st">&quot;p&quot;</span>, <span class="dt">pch=</span><span class="dv">16</span>,
        <span class="dt">auto.key=</span><span class="kw">list</span>(<span class="dt">border=</span><span class="ot">TRUE</span>),<span class="dt">data=</span>ddt)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot8b-1.png" />
+<img src="figure/plot8b-1.png" />
 
 </div>
 </div>
@@ -381,7 +383,7 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">scatterplotMatrix</span>(<span class="op">~</span>DDT_conc<span class="op">+</span>length<span class="op">+</span>weight, <span class="dt">reg.line=</span>lm, <span class="dt">smooth=</span><span class="ot">FALSE</span>, 
   <span class="dt">spread=</span><span class="ot">FALSE</span>, <span class="dt">span=</span><span class="fl">0.5</span>, <span class="dt">id.n=</span><span class="dv">0</span>, <span class="dt">diagonal =</span> <span class="st">&#39;histogram&#39;</span>, <span class="dt">data=</span>ddt)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot9-1.png" />
+<img src="figure/plot9-1.png" />
 
 </div>
 </div>
@@ -390,10 +392,27 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 <ul>
 <li>Los 'Gráficos de medias' son muy útiles en ANOVAs</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(Rcmdr)
-<span class="kw">plotMeans</span>(ddt<span class="op">$</span>DDT_conc, ddt<span class="op">$</span>species_name, <span class="dt">error.bars=</span><span class="st">&quot;conf.int&quot;</span>, <span class="dt">level=</span><span class="fl">0.95</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(Rcmdr)</code></pre></div>
+<pre><code>## Loading required package: Rcmdr</code></pre>
+<pre><code>## Loading required package: splines</code></pre>
+<pre><code>## Loading required package: RcmdrMisc</code></pre>
+<pre><code>## Loading required package: sandwich</code></pre>
+<pre><code>## Loading required package: effects</code></pre>
+<pre><code>## Loading required package: carData</code></pre>
+<pre><code>## 
+## Attaching package: &#39;carData&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:car&#39;:
+## 
+##     Guyer, UN, Vocab</code></pre>
+<pre><code>## Use the command
+##     lattice::trellis.par.set(effectsTheme())
+##   to customize lattice options for effects plots.
+## See ?efffectTheme for details.</code></pre>
+<pre><code>## 
+## Versi�n del Rcmdr 2.4-1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotMeans</span>(ddt<span class="op">$</span>DDT_conc, ddt<span class="op">$</span>species_name, <span class="dt">error.bars=</span><span class="st">&quot;conf.int&quot;</span>, <span class="dt">level=</span><span class="fl">0.95</span>)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot10-1.png" />
+<img src="figure/plot10-1.png" />
 
 </div>
 </div>
@@ -430,7 +449,7 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 <li>1º PASO: ¿Se asume normalidad de la variable peso?</li>
 </ul>
 <div class="figure">
-<img src="assets/fig/plot1-1.png" />
+<img src="figure/plot1-1.png" />
 
 </div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">shapiro.test</span>(ddt<span class="op">$</span>weight)</code></pre></div>
@@ -446,7 +465,7 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 <p>Comparar el peso de los peces del grupo 1 con el peso de los del grupo 2.</p>
 <ul>
 <li>2º PASO: ¿Se asume igualdad de varianzas de peso entre los grupos?<br />
-<img src="assets/fig/plot2-1.png" /></li>
+<img src="figure/plot2-1.png" /></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">bartlett.test</span>(weight <span class="op">~</span><span class="st"> </span>group, <span class="dt">data=</span>ddt)</code></pre></div>
 <pre><code>## 
@@ -526,7 +545,7 @@ anova.mod1 &lt;-<span class="st"> </span><span class="kw">aov</span>(weight <spa
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">anova.mod1 &lt;-<span class="st"> </span><span class="kw">aov</span>(weight <span class="op">~</span><span class="st"> </span>location_name, <span class="dt">data=</span>ddt)
 <span class="kw">summary</span>(<span class="kw">glht</span>(anova.mod1, <span class="dt">linfct =</span> <span class="kw">mcp</span>(<span class="dt">location_name =</span> <span class="st">&quot;Tukey&quot;</span>))) <span class="co"># pairwise tests</span></code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot3-1.png" />
+<img src="figure/plot3-1.png" />
 
 </div>
 </div>
@@ -536,7 +555,7 @@ anova.mod1 &lt;-<span class="st"> </span><span class="kw">aov</span>(weight <spa
 <li>En el ANOVA de múltiples factores es posible analizar no sólo los efectos simples sino también las interacciones.</li>
 </ul>
 <div class="figure">
-<img src="assets/fig/plot4-1.png" />
+<img src="figure/plot4-1.png" />
 
 </div>
 </div>
@@ -588,7 +607,7 @@ anova.mod1 &lt;-<span class="st"> </span><span class="kw">aov</span>(weight <spa
      <span class="dt">pch=</span><span class="dv">20</span>)
 <span class="kw">abline</span>(regmod.<span class="dv">1</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>,<span class="dt">lty=</span><span class="st">&quot;dashed&quot;</span>)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot5-1.png" />
+<img src="figure/plot5-1.png" />
 
 </div>
 </div>
@@ -600,7 +619,7 @@ anova.mod1 &lt;-<span class="st"> </span><span class="kw">aov</span>(weight <spa
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))
 <span class="kw">plot</span>(regmod.<span class="dv">1</span>)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot6-1.png" />
+<img src="figure/plot6-1.png" />
 
 </div>
 </div>
@@ -623,10 +642,11 @@ anova.mod1 &lt;-<span class="st"> </span><span class="kw">aov</span>(weight <spa
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ddt<span class="op">$</span>length.<span class="dv">3</span> &lt;-<span class="st"> </span>ddt<span class="op">$</span>length<span class="op">^</span><span class="dv">3</span>
 ddt<span class="op">$</span>sqrt.weight &lt;-<span class="st"> </span><span class="kw">sqrt</span>(ddt<span class="op">$</span>weight)
-<span class="kw">source_gist</span>(<span class="st">&quot;f9b06d411675c1702ccc&quot;</span>,<span class="dt">filename=</span><span class="st">&quot;plotConf.R&quot;</span>)
-<span class="kw">plotConf</span>(sqrt.weight<span class="op">~</span>length.<span class="dv">3</span>, ddt)</code></pre></div>
+<span class="kw">source_gist</span>(<span class="st">&quot;f9b06d411675c1702ccc&quot;</span>,<span class="dt">filename=</span><span class="st">&quot;plotConf.R&quot;</span>)</code></pre></div>
+<pre><code>## Error in source_gist(&quot;f9b06d411675c1702ccc&quot;, filename = &quot;plotConf.R&quot;): could not find function &quot;source_gist&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plotConf</span>(sqrt.weight<span class="op">~</span>length.<span class="dv">3</span>, ddt)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot11-1.png" />
+<img src="figure/plot11-1.png" />
 
 </div>
 </div>
@@ -642,7 +662,7 @@ ddt<span class="op">$</span>sqrt.weight &lt;-<span class="st"> </span><span clas
 <span class="kw">plotCluster</span>(<span class="dv">1</span>,ddt[,<span class="kw">c</span>(<span class="st">&quot;length&quot;</span>,<span class="st">&quot;weight&quot;</span>,<span class="st">&quot;DDT_conc&quot;</span>)],ddt<span class="op">$</span>species_name)
 <span class="kw">plotCluster</span>(<span class="dv">2</span>,ddt[,<span class="kw">c</span>(<span class="st">&quot;length&quot;</span>,<span class="st">&quot;weight&quot;</span>,<span class="st">&quot;DDT_conc&quot;</span>)],ddt<span class="op">$</span>species_name)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/plot12-1.png" />
+<img src="figure/plot12-1.png" />
 
 </div>
 </div>
