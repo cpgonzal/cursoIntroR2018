@@ -1,2 +1,3 @@
-# cursoIntroR2018
-Curso de introducción a R
+Introducción al R y su utilización para análisis estadístico con Rstudio y Rcommander
+=======================================================
+Plan de Actividades de Formación Docente del Profesorado (curso 2017/18)
