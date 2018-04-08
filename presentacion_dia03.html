@@ -57,7 +57,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <p class="author">
 Profesores: Carlos M. González Alcón - Carlos Pérez González <br/> (Dpto. de Matemáticas, Estadística e Investigación Operativa - Universidad de La Laguna)
   </p>
-  <p class="date">Día 3</p>
+  <p class="date">Introducción a la interfaz Rstudio.</p>
 </div>
 <div class="slide section level1">
 
@@ -471,7 +471,6 @@ pre {
 <li>Para ilustrar el manejo de las instrucciones de visualización, vamos a usar escribir el siguiente código dentro de nuestro script de R debajo de la función <code>Resumen</code>:</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># cargamos los datos del fichero</span>
-<span class="kw">getwd</span>()
 ddt  &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;ddt.txt&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)
 
 <span class="co"># pesos de la especie “catfish”</span>
@@ -480,7 +479,7 @@ catfish.weight  &lt;-<span class="st"> </span>ddt<span class="op">$</span>weight
 <span class="co"># histograma del peso de los “catfish”</span>
 <span class="kw">hist</span>(catfish.weight)</code></pre></div>
 <div class="figure">
-<img src="assets/fig/Histograma-1.png" />
+<img src="figure/Histograma-1.png" />
 
 </div>
 <ul>
