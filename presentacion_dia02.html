@@ -7,7 +7,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Profesores: Carlos M. González Alcón - Carlos Pérez González   (Dpto. Matemáticas, Estadística e Investigación Operativa - Universidad de La Laguna)" />
-  <title>Introducción al R y su utilización para análisis estadístico con Rstudio y Rcommander</title>
+  <title>Introducción a R y Rstudio</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -53,7 +53,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <div class="slide titlepage">
-  <h1 class="title">Introducción al R y su utilización para análisis estadístico con Rstudio y Rcommander</h1>
+  <h1 class="title">Introducción a R y Rstudio</h1>
   <p class="author">
 Profesores: Carlos M. González Alcón - Carlos Pérez González <br/> (Dpto. Matemáticas, Estadística e Investigación Operativa - Universidad de La Laguna)
   </p>
@@ -352,8 +352,8 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 <li>Los gráficos 'Diagrama de dispersión' permiten representar 2 variables y añadir la información de un grupo.</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(car)
-<span class="kw">scatterplot</span>(length<span class="op">~</span>weight <span class="op">|</span><span class="st"> </span>group, <span class="dt">reg.line=</span>lm, <span class="dt">smooth=</span><span class="ot">FALSE</span>, 
-  <span class="dt">spread=</span><span class="ot">FALSE</span>, <span class="dt">boxplots=</span><span class="ot">FALSE</span>, <span class="dt">span=</span><span class="fl">0.5</span>, <span class="dt">by.groups=</span><span class="ot">TRUE</span>, <span class="dt">reset.par=</span><span class="ot">FALSE</span>, 
+<span class="kw">scatterplot</span>(length<span class="op">~</span>weight <span class="op">|</span><span class="st"> </span>group, <span class="dt">regLine=</span><span class="ot">TRUE</span>, <span class="dt">smooth=</span><span class="ot">FALSE</span>, 
+  <span class="dt">boxplots=</span><span class="ot">FALSE</span>, <span class="dt">by.groups=</span><span class="ot">TRUE</span>, <span class="dt">reset.par=</span><span class="ot">FALSE</span>, 
   <span class="dt">data=</span>ddt)</code></pre></div>
 <div class="figure">
 <img src="assets/fig/plot8a-1.png" />
@@ -378,8 +378,8 @@ devtools<span class="op">::</span><span class="kw">source_gist</span>(<span clas
 <ul>
 <li>Los gráficos 'Matriz de diagrama de dispersión' permiten visualizar múltiples variables</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">scatterplotMatrix</span>(<span class="op">~</span>DDT_conc<span class="op">+</span>length<span class="op">+</span>weight, <span class="dt">reg.line=</span>lm, <span class="dt">smooth=</span><span class="ot">FALSE</span>, 
-  <span class="dt">spread=</span><span class="ot">FALSE</span>, <span class="dt">span=</span><span class="fl">0.5</span>, <span class="dt">id.n=</span><span class="dv">0</span>, <span class="dt">diagonal =</span> <span class="st">&#39;histogram&#39;</span>, <span class="dt">data=</span>ddt)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">scatterplotMatrix</span>(<span class="op">~</span>DDT_conc<span class="op">+</span>length<span class="op">+</span>weight, <span class="dt">regLine=</span><span class="ot">TRUE</span>, <span class="dt">smooth=</span><span class="ot">FALSE</span>, 
+  <span class="dt">diagonal =</span> <span class="ot">TRUE</span>, <span class="dt">data=</span>ddt)</code></pre></div>
 <div class="figure">
 <img src="assets/fig/plot9-1.png" />
 
